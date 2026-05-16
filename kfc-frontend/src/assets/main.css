@@ -1,0 +1,94 @@
+@import './base.css';
+
+:root {
+  --el-color-primary: #e4002b;
+  --el-color-primary-light-3: #ed4d6b;
+  --el-color-primary-light-5: #f27f95;
+  --el-color-primary-light-7: #f6b3c0;
+  --el-color-primary-light-8: #f9ccd5;
+  --el-color-primary-light-9: #fde6ea;
+  --el-color-primary-dark-2: #c80025;
+}
+
+#app {
+  width: 100%;
+  min-height: 100vh;
+  font-weight: normal;
+}
+
+.red-btn {
+  background: #e4002b;
+  border-color: #e4002b;
+  color: #fff;
+  font-weight: 700;
+}
+
+.red-btn:hover,
+.red-btn:focus {
+  background: #c80025;
+  border-color: #c80025;
+  color: #fff;
+}
+
+.outline-btn {
+  border-color: #e4002b;
+  color: #e4002b;
+  background: #fff;
+}
+
+.outline-btn:hover,
+.outline-btn:focus {
+  border-color: #c80025;
+  color: #c80025;
+  background: #fff5f7;
+}
+
+.list-tools {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.search-input {
+  width: min(320px, 100%);
+}
+
+.pagination-bar {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 14px;
+}
+
+@media (max-width: 900px) {
+  .list-tools {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .pagination-bar {
+    justify-content: flex-start;
+    overflow-x: auto;
+  }
+}
+
+a,
+.green {
+  text-decoration: none;
+  color: hsla(160, 100%, 37%, 1);
+  transition: 0.4s;
+  padding: 3px;
+}
+
+@media (hover: hover) {
+  a:hover {
+    background-color: hsla(160, 100%, 37%, 0.2);
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    min-height: 100vh;
+  }
+}
