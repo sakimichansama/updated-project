@@ -12,6 +12,7 @@ import EmployeePerformance from '@/views/hr/EmployeePerformance.vue'
 import SalesDaily from '@/views/finance/SalesDaily.vue'
 import SalesTrend from '@/views/finance/SalesTrend.vue'
 import ProfitReport from '@/views/finance/ProfitReport.vue'
+import ProductMarginAnalysis from '@/views/finance/ProductMarginAnalysis.vue'
 import AiAssistant from '@/views/assistant/AiAssistant.vue'
 import Profile from '@/views/profile/Profile.vue'
 
@@ -31,6 +32,7 @@ const router = createRouter({
     { path: '/finance/sales', name: 'SalesDaily', component: SalesDaily },
     { path: '/finance/sales-trend', name: 'SalesTrend', component: SalesTrend },
     { path: '/finance/profit', name: 'ProfitReport', component: ProfitReport },
+    { path: '/finance/product-margin', name: 'ProductMarginAnalysis', component: ProductMarginAnalysis },
     { path: '/assistant', name: 'AiAssistant', component: AiAssistant },
     { path: '/profile', name: 'Profile', component: Profile },
     { path: '/:pathMatch(.*)*', redirect: '/dashboard' }

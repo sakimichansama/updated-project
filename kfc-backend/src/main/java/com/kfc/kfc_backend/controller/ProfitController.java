@@ -7,6 +7,7 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import java.time.LocalDate;
 import java.util.Map;
 
 @RestController
@@ -26,6 +27,12 @@ public class ProfitController {
         int year = Integer.parseInt(parts[0]);
         int monthNum = Integer.parseInt(parts[1]);
         return profitService.getMonthlyProfitReport(year, monthNum);
+    }
+
+    // GET /api/profit/product-margin?start=yyyy-MM-dd&end=yyyy-MM-dd
+    @GetMapping("/product-margin")
+    public Map<String, Object> getProductMargin(@RequestParam String start, @RequestParam String end) {
+        return profitService.getProductMarginReport(LocalDate.parse(start), LocalDate.parse(end));
     }
 
     // GET /api/profit/export?month=yyyy-MM

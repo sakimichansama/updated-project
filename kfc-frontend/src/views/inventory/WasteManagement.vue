@@ -65,8 +65,8 @@
         <el-table-column prop="createTime" label="Created At" min-width="170" />
         <el-table-column label="Actions" width="150" fixed="right">
           <template #default="{ row }">
-            <el-button link type="primary" :disabled="row.status === 'Closed'" @click="openCloseDialog(row)">Close</el-button>
-            <el-button link type="danger" @click="deleteWaste(row.id)">Delete</el-button>
+            <el-button class="table-action-btn table-action-primary" :disabled="row.status === 'Closed'" @click="openCloseDialog(row)">Close</el-button>
+            <el-button class="table-action-btn table-action-danger" @click="deleteWaste(row.id)">Delete</el-button>
           </template>
         </el-table-column>
       </el-table>

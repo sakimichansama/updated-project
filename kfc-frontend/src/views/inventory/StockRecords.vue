@@ -39,7 +39,7 @@
             <el-table-column prop="createTime" label="Time" min-width="170" />
             <el-table-column label="Actions" width="110" fixed="right">
               <template #default="{ row }">
-                <el-button link type="danger" @click="deleteInRecord(row.id)">Delete</el-button>
+                <el-button class="table-action-btn table-action-danger" @click="deleteInRecord(row.id)">Delete</el-button>
               </template>
             </el-table-column>
           </el-table>
@@ -87,9 +87,9 @@
             <el-table-column label="Actions" width="120" fixed="right" align="center">
               <template #default="{ row }">
                 <el-tooltip v-if="row.orderId || row.wasteId" content="Linked records cannot be deleted here" placement="top">
-                  <el-button link type="danger" disabled>Delete</el-button>
+                  <el-button class="table-action-btn table-action-danger" disabled>Delete</el-button>
                 </el-tooltip>
-                <el-button v-else link type="danger" @click="deleteOutRecord(row.id)">Delete</el-button>
+                <el-button v-else class="table-action-btn table-action-danger" @click="deleteOutRecord(row.id)">Delete</el-button>
               </template>
             </el-table-column>
           </el-table>

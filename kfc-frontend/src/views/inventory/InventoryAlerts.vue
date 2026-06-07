@@ -47,7 +47,7 @@
         <el-table-column prop="suggestion" label="Advice" min-width="220" />
         <el-table-column label="Actions" width="120" fixed="right">
           <template #default="{ row }">
-            <el-button link type="primary" :disabled="!row.suggestedQuantity" @click="quickReplenish(row)">
+            <el-button class="table-action-btn table-action-primary" :disabled="!row.suggestedQuantity" @click="quickReplenish(row)">
               One-click Inbound
             </el-button>
           </template>

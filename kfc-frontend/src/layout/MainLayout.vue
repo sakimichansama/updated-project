@@ -47,6 +47,7 @@
           <el-menu-item index="/finance/sales">Order Entry</el-menu-item>
           <el-menu-item index="/finance/sales-trend">Sales Trend</el-menu-item>
           <el-menu-item index="/finance/profit">Profit Statistics Analysis</el-menu-item>
+          <el-menu-item index="/finance/product-margin">Product Margin Analysis</el-menu-item>
         </el-sub-menu>
         <el-sub-menu index="tools">
           <template #title>
@@ -139,6 +140,7 @@ const currentRoute = computed(() => {
     '/finance/sales': 'Order Entry',
     '/finance/sales-trend': 'Sales Trend',
     '/finance/profit': 'Profit Statistics Analysis',
+    '/finance/product-margin': 'Product Margin Analysis',
     '/assistant': 'Knowledge Q&A',
     '/profile': 'Profile'
   }

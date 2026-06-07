@@ -71,8 +71,8 @@
         <el-table-column prop="status" label="Status" width="90" />
         <el-table-column label="Actions" width="150" fixed="right">
           <template #default="{ row }">
-            <el-button link type="primary" @click="editOrder(row)">Edit</el-button>
-            <el-button link type="danger" @click="deleteOrder(row.id)">Delete</el-button>
+            <el-button class="table-action-btn table-action-primary" @click="editOrder(row)">Edit</el-button>
+            <el-button class="table-action-btn table-action-danger" @click="deleteOrder(row.id)">Delete</el-button>
           </template>
         </el-table-column>
       </el-table>
